@@ -212,13 +212,25 @@ header {
     background-image: url(./assets/aishu.png)
 }
 
-/* .hip-hop-card{
+.hip-hop-card{
     background-image: url(./assets/hip-hop.png);
 }
 
 .coding-card{
-    background-image: url(./assets/coding.png);
-} */
+    background-image: url(./assets/coding.jfif);
+}
+
+.singing-card{
+    background-image: url(./assets/singing.jpg)
+}
+
+.ela-card{
+    background-image: url(./assets/ela.jpg);
+}
+
+.math-card{
+    background-image: url(./assets/math.jpg)
+}
 
 .card {
     height: 500px;
