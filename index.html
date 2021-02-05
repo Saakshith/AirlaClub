@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -19,8 +23,8 @@
                 <li class="nav-link"><a href="index.html" class="nav-link-link nav-link-hover">Home</a></li>
                 <li class="nav-link"><a href="#meet-the-team" class="nav-link-link nav-link-hover">Meet the Team</a></li>
                 <li class="nav-link"><a href="#subscribe" class="nav-link-link nav-link-hover">Newsletter</a></li>
-                <li class="nav-link"><a href="#testimonials" class="nav-link-link nav-link-hover">Testimonials</a></li>
                 <li class="nav-link"><a href="#take-the-classes" class="nav-link-link nav-link-hover">Take The Classes</a></li>
+                <li class="nav-link"><a href="#testimonials" class="nav-link-link nav-link-hover">Testimonials</a></li>
                 <li class="nav-link "><button class="button nav-link-button"><a href="#take-the-classes" class="nav-link-link">Sign Up</a></button></li>
             </ul>
         </nav>
@@ -139,6 +143,32 @@
             </div>
         </div>
     </section>
+    <section id="testimonals">
+        <div class="subtitle-container">
+            <h1 class="subtitle raleway">Testimonials</h1>
+        </div>
+        <div class="rest-of-container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-quote-icon-container">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="swiper-slide-content nunito">
+                            <p class="swiper-slide-text">
+                                I love this program, its so interactive and amazing. Thank you Airla Club for this great program. I have so much more fun after school now.
+                            </p>
+
+                            <div class="swiper-slide-content-person">
+                                <div class="swiper-slide-img"></div>
+                                <h2 class="swiper-slide-name">Amelia Casseiopeia</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
     <footer id="footer">
         <div class="footer-texts-container nunito">
             <div class="footer-text-container">
@@ -203,5 +233,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+    </script>
 </body>
 </html>
