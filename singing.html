@@ -82,50 +82,50 @@
             <div class="subtitle-container">
                 <h1 class="subtitle raleway">Register</h1>
             </div>
-            <form method="post" required class="text-white registration-form" id="register">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
+            <form method="post" class="text-white registration-form" id="register" name="google-sheet">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" email="email" required>
                 <div class="radio-container">
                     <div class="radio-single-container">
-                        <input type="radio" name="grade" class="radio"><span>Pre-K</span>
+                        <input type="radio" name="grade" class="radio" required><span>Pre-K</span>
                     </div>
                     <div class="radio-single-container">
-                        <input type="radio" name="grade" class="radio"><span>Kindergarten</span>
+                        <input type="radio" name="grade" class="radio" required><span>Kindergarten</span>
                     </div>
                     <div class="radio-single-container">
-                        <input type="radio" name="grade" class="radio"><span>1st Grade</span>
+                        <input type="radio" name="grade" class="radio" required><span>1st Grade</span>
                     </div>
                     <div class="radio-single-container">
-                        <input type="radio" name="grade" class="radio"><span>2nd Grade</span>
+                        <input type="radio" name="grade" class="radio" required><span>2nd Grade</span>
                     </div>
                     <div class="radio-single-container">
-                        <input type="radio" name="grade" class="radio"><span>3rd Grade</span>
+                        <input type="radio" name="grade" class="radio" required><span>3rd Grade</span>
                     </div>
                     <div class="radio-single-container">
-                        <input type="radio" name="grade" class="radio"><span>4th Grade</span>
+                        <input type="radio" name="grade" class="radio" required><span>4th Grade</span>
                     </div>
                 </div>
                 <br>
                 <div class="radio-container">
                     <div class="radio-single-container">
-                        <input type="radio" name="reason" class="radio"><span>Need Homework Help</span>
+                        <input type="radio" name="reason" class="radio" required><span>Need Homework Help</span>
                     </div>
                     <div class="radio-single-container">
-                        <input type="radio" name="reason" class="radio"><span>Want To learn More</span>
+                        <input type="radio" name="reason" class="radio" required><span>Want To learn More</span>
                     </div>
                     <div class="radio-single-container">
-                        <input type="radio" name="reason" class="radio"><span>Next Years Curriculum</span>
+                        <input type="radio" name="reason" class="radio" required><span>Next Years Curriculum</span>
                     </div>
                     <div class="radio-single-container">
-                        <input type="radio" name="reason" class="radio"><span>Other</span>
+                        <input type="radio" name="reason" class="radio" required><span>Other</span>
                     </div>
                 </div>
-                <input type="text" placeholder="Parent Name">
-                <input type="email" placeholder="Parent Email">
+                <input type="text" placeholder="Parent Name" name="parent-name" required>
+                <input type="email" placeholder="Parent Email" name="parent-email" required>
                 <br>
-                <textarea class="concerns-questions" cols="36" rows="10" placeholder="Are there any questions or concerns you might have for me"></textarea>
+                <textarea class="concerns-questions" cols="36" rows="10" name="questions-or-concerns" placeholder="Are there any questions or concerns you might have for me" required></textarea>
                 <br>
-                <a href="#"><button class="hero-text nunito registration-button">Submit</button></a>
+                <a href="#"><button class="hero-text nunito registration-button" type="submit">Submit</button></a>
             </form>
         </div>
     </section>
@@ -193,5 +193,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxodu3Q6zQd41_Ybwbnn5-K8CBocFyVynDzl_CPIZ9M-8DQvF-9xBB7Cg/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+    </script>
 </body>
 </html>
