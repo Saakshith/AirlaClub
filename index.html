@@ -92,9 +92,9 @@
         <div class="subscribe-subtitle-container">
             <p class="nunito">Subscribe to our newsletter, it provides weekly updates and new information about the program and much more</p>
         </div>
-        <form action="POST" class= "form-horizontal">
-            <input type="text" placeholder="Name" class="subscribe-form-item">
-            <input type="text" placeholder="Email" class="subscribe-form-item">
+        <form action="POST" name="google-sheet" class="form-horizontal">
+            <input type="text" placeholder="Name" name="name" class="subscribe-form-item" required>
+            <input type="text" placeholder="Email" name="email" class="subscribe-form-item" required>
             <button type="submit" class="nunito">Submit</button>
         </form>
     </section>
@@ -253,6 +253,17 @@
             el: '.swiper-pagination',
           },
         });
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxNW-GgJRPLWtJz-BcDBhJ5UxyUEnH96GANV3hksMKjRFXNcTx8uFG/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
     </script>
 </body>
 </html>
