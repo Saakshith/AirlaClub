@@ -485,6 +485,7 @@ footer {
     margin-right: var(--margin-default) !important;
     color: var(--white-color);
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .footer-text-container {
