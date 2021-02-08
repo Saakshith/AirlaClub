@@ -38,6 +38,25 @@ section {
 nav {
     display: flex;
     justify-content: space-around;
+    z-index: 999;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 15%;
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 10px;
 }
 
 button {
@@ -516,36 +535,57 @@ a{
 }
 
 @media all and (max-width:800px){
-    nav{
-        display: none;
-    }
-    
-    .hero-content-wrapper{
-        margin-top: 20vw;
-        margin-left: 17vw;
-        margin-bottom: 20vw;
-        margin-right: 17vw;
-        text-align: center;
+    .toggle-button{
+        display: flex;
     }
 
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        margin-top: 5rem;
+        margin-right: 2rem;
+    }    
+
+    .nav-link{
+        padding: 1%;
+    }
+
+    .active{
+        display: flex;
+    }
+}
+
+@media all and (max-width:600px){
+    .hero-content-wrapper{
+        width: fit-content;
+        height: fit-content;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
+}
+
+@media all and (max-width:440px){
     .page-title{
         font-size: 55px;
         letter-spacing: 10px;
     }
 }
 
-@media all and (max-width:640px){
+@media all and (max-width:360px){
     .hero-content-wrapper{
-        margin-top: 25vw;
-        margin-left: 12vw;
-        margin-bottom: 20vw;
-        margin-right: 20vw;
+        margin-top: 10rem;
     }
-}
 
-@media all and (max-width: 568px){
-    .hero-content-wrapper{
-        margin-top: 30vw;
-        transform: translateX(-7vw)
+    .page-title{
+        font-size: 40px;
+        letter-spacing: 5px;
+    }
+    
+    .page-subtitle{
+        font-size: 10px;
+        line-height: 18px;
     }
 }

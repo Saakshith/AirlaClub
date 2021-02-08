@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <title>Airla Club</title>
 </head>
 <body>
@@ -21,7 +20,12 @@
                 <a href="index.html"><img src="assets/logo.png" alt="logo" width="110"></a>
                 <!-- <h2 class="logo-text raleway"><i>Airla Club</i></h2> -->
             </div>
-            <ul class="nav-links">
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <ul class="nav-links active">
                 <li class="nav-link"><a href="index.html" class="nav-link-link nav-link-hover">Home</a></li>
                 <li class="nav-link"><a href="#meet-the-team" class="nav-link-link nav-link-hover">Meet the Team</a></li>
                 <li class="nav-link"><a href="#subscribe" class="nav-link-link nav-link-hover">Newsletter</a></li>
@@ -264,6 +268,14 @@
                 .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
                 .catch(error => console.error('Error!', error.message))
             })
+    </script>
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        const navbarLinks = document.getElementsByClassName('nav-links')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        })
     </script>
 </body>
 </html>
