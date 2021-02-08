@@ -514,3 +514,38 @@ a{
     background-position: center;
     margin-right: 20px;
 }
+
+@media all and (max-width:800px){
+    nav{
+        display: none;
+    }
+    
+    .hero-content-wrapper{
+        margin-top: 20vw;
+        margin-left: 17vw;
+        margin-bottom: 20vw;
+        margin-right: 17vw;
+        text-align: center;
+    }
+
+    .page-title{
+        font-size: 55px;
+        letter-spacing: 10px;
+    }
+}
+
+@media all and (max-width:640px){
+    .hero-content-wrapper{
+        margin-top: 25vw;
+        margin-left: 12vw;
+        margin-bottom: 20vw;
+        margin-right: 20vw;
+    }
+}
+
+@media all and (max-width: 568px){
+    .hero-content-wrapper{
+        margin-top: 30vw;
+        transform: translateX(-7vw)
+    }
+}
