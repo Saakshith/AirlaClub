@@ -129,6 +129,10 @@ header {
     flex-direction: column;
 }
 
+.aboutme-header{
+    background-image: url(./assets/aboutus-background.jfif);
+}
+
 .singing-header{
     background-image: url(./assets/singing.jpg)
 }
@@ -147,6 +151,39 @@ header {
 
 .hip-hop-header{
     background-image: url(./assets/hip-hop.png)
+}
+
+
+.aboutme-img-container{
+    position: absolute;
+    width: 30%;
+    height: 400px;
+    left: 50%;
+    top: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: var(--margin-default);
+    border-radius: 50px;
+}
+
+.laasya-img-container{
+    background-image: url(./assets/laasya.png);
+}
+
+.raagini-img-container{
+    background-image: url(./assets/raaga.png)
+}
+
+.ishitha-img-container{
+    background-image: url(./assets/ishitha.jpg)
+}
+
+.ananya-img-container{
+    background-image: url(./assets/ananya.png)
+}
+
+.aishu-img-container{
+    background-image: url(./assets/aishu.png)
 }
 
 .hero-content-wrapper {
