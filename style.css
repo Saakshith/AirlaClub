@@ -33,7 +33,7 @@ section {
     display: flex;
     flex-direction: column;
     background-color: var(--dark-color);
-  }
+}
 
 nav {
     display: flex;
@@ -118,7 +118,8 @@ button:hover {
 /* Hero Section */
 
 header {
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 1rem;
     background-image: url(./assets/hero-img.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -131,6 +132,7 @@ header {
 
 .aboutme-header{
     background-image: url(./assets/aboutus-background.jfif);
+    flex-wrap: wrap;
 }
 
 .singing-header{
@@ -155,15 +157,21 @@ header {
 
 
 .aboutme-img-container{
-    position: absolute;
-    width: 30%;
+    width: 300px;
     height: 400px;
-    left: 50%;
-    top: 25%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin-right: var(--margin-default);
     border-radius: 50px;
+    margin-top: 5rem;
+}
+
+.img-content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
 }
 
 .laasya-img-container{
@@ -384,10 +392,11 @@ input:not([type="radio"]){
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 50vh
 }
 
 .p-container{
-    height: 30vh;
+    min-height: 30vh;
     margin: 0 var(--margin-default) 0 var(--margin-default);
     font-size: large;
     line-height: 30px;
@@ -570,6 +579,18 @@ a{
     background-size: cover;
     background-position: center;
     margin-right: 20px;
+}
+
+@media all and (max-width:900px){
+    .img-content-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .aboutme-img-container{
+        width: 400px;
+        background-position: top;
+        margin-left: var(--margin-default);
+    }
 }
 
 @media all and (max-width:800px){
